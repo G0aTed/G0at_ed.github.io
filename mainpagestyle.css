@@ -1,0 +1,160 @@
+body {
+    margin: 0;
+}
+
+main {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    perspective: 2px;
+}
+
+section {
+    transform-style: preserve-3d;
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.no-parallax {
+    background-color: #111;
+    z-index: 999;
+}
+
+.title {
+    background-color: #111;
+    height: 150vh;
+    display: flex;
+    width: 100vw;
+}
+
+section p1 {
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+section h1 {
+    text-align: center;
+    font-size: 50px;
+    font-family: sans-serif;
+}
+
+.parallax h1 {
+    width: 60%;
+    font-size: 40px;
+}
+
+.parallax p1 {
+    color: white;
+}
+
+.parallax button{
+    height: 100vh;
+    width: 100vw;
+}
+
+.parallax::after {
+    content: " ";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    transform: translateZ(-1px) scale(1.5);
+    background-size: 100%;
+    z-index: -1;
+}
+
+button.tim{
+    background-color: rgba(84, 84, 82, 0.4);
+    outline: solid rgba(84, 84, 82, 0.4);
+}
+
+button.definition {
+    background-color: rgba(84, 84, 82, 0);
+    outline: solid rgba(84, 84, 82, 0.4);
+    width: 100vw;
+    height: 100vh;
+}
+
+button.definition:hover{
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: 0.7s;
+}
+
+button.tim:hover{
+    background-color: rgba(84, 84, 82, 0);
+    transition: 0.7s;
+}
+
+button h1{
+    color: white;
+}
+
+.bg::after {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(https://assets-global.website-files.com/5e9aa66fd3886aa2b4ec01ca/5f70543570b5e2094378cb48_sirtimbernerslee.jpg);
+    background-size: cover;
+}
+
+.https::after{
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+        url(https://blog.zyxel.com/hubfs/https.jpeg);
+    background-size: cover;
+    
+}
+
+.transmission::after {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+    background-size: cover;
+}
+
+img.definition {
+    filter: drop-shadow(10px 10px 10px white)
+}
+
+
+button.transmission{
+    opacity: 0;
+    background-color: rgba(84, 84, 82, 255);
+    background-image: url("Data-Transfer.gif");
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+
+button.transmission:hover{
+    background-image: url("static.png");
+    transition: 0.5s;
+    font-size: 5vw;
+}
+
+button.access {
+    background-color: rgba(84, 84, 82, 0);
+    outline: solid rgba(84, 84, 82, 0.4);
+    width: 100vw;
+    height: 100vh;
+}
+
+button.access:hover{
+    background-color: rgba(99, 197, 218, 1);
+    transition: 0.7s;
+}
+
+.end {
+    background-color: #111;
+    height: 25vh;
+    display: flex;
+    width: 100vw;
+}
+
+@media screen and (min-width: 768px) {
+    section h1 {
+        font-size: 80px;
+    }
+    .parallax h1 {
+        font-size: 60px;
+    }
+}
